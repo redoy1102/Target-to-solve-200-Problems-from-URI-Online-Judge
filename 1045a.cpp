@@ -19,24 +19,37 @@ int main(){
         B = C;
         C = temp;
     }
-
-    if(A >= (B + C)){
+    
+    switch(A, B, C){
+        case (A >= (B + C)):
         cout<<"NAO FORMA TRIANGULO"<<endl;
-    }
-    else if((A*A) == ((B*B) + (C*C))){
+
+        case ((A*A) == (B*B) + (C*C)):
         cout<<"TRIANGULO RETANGULO"<<endl;
-    }
-    else if((A*A) > ((B*B) + (C*C))){
+
+        case ((A*A) > (B*B) + (C*C)):
         cout<<"TRIANGULO OBTUSANGULO"<<endl;
-    }
-    else if((A*A) < ((B*B) + (C*C))){
-        cout<<"TRIANGULO ACUTANGULO"<<endl;
-    }
-    if(A == B && B == C){
-        cout<<"TRIANGULO EQUILATERO"<<endl;
-    }
-    else if(A == B || B == C || C == A){
+
+        case ((A != (B == C)) || (B != (A == C)) || (C != (A == B))):
         cout<<"TRIANGULO ISOSCELES"<<endl;
+
+        case ((A*A) < (B*B) + (C*C)):
+        cout<<"TRIANGULO ACUTANGULO"<<endl;
+
+        case A != (B == C)) || (B != (A == C)) || (C != (A == B)):
+        cout<<"TRIANGULO ISOSCELES"<<endl;
+
+        case (A == B == C):
+        cout<<"TRIANGULO EQUILATERO"<<endl;
+
+        case (A == B == C):
+        cout<<"TRIANGULO EQUILATERO"<<endl;
+
+        case ((A != (B == C)) || (B != (A == C)) || (C != (A == B))):
+        cout<<"TRIANGULO ISOSCELES"<<endl;
+    }
+
+
     }
 
     return 0;
